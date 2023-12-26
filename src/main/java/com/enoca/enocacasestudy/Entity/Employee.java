@@ -25,7 +25,7 @@ public class Employee {
     private String surname;
     @Column
 
-    private double salary;
+    private Double salary;
     @Column
     private Integer age;
     @Column

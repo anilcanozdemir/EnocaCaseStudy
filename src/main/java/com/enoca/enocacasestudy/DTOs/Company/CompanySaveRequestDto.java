@@ -1,6 +1,5 @@
 package com.enoca.enocacasestudy.DTOs.Company;
 
-import com.enoca.enocacasestudy.Entity.Employee;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
@@ -10,7 +9,6 @@ import lombok.NoArgsConstructor;
 import lombok.Value;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * DTO for {@link com.enoca.enocacasestudy.Entity.Company}
@@ -18,10 +16,7 @@ import java.util.List;
 @Value
 @NoArgsConstructor(force = true)
 @AllArgsConstructor
-public class CompanyDto implements Serializable {
-    @NotNull(message = "id can not be null")
-    @Positive(message = "id can not be negative")
-    Long id;
+public class CompanySaveRequestDto implements Serializable {
     @NotNull(message = "companyName must be not null")
     @NotEmpty(message = "companyName must be not empty")
     @NotBlank(message = "companyName must be not blank")
